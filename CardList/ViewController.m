@@ -66,14 +66,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //reuse the customized cell
     static NSString *CellIdentifier = @"UITableViewCell";
     CustomCellView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
         cell = [[CustomCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
-//    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
-//    cell.backgroundColor = indexPath.row%2 ? [UIColor greenColor]:[UIColor yellowColor];
 
+    //set image and text after the cell init
     UIImage *img = [UIImage imageNamed:[self.listData[indexPath.row] objectForKey:@"imgLogo"]]; //fetch the dictionary
     [cell setTextLabel:[self.listData[indexPath.row] objectForKey:@"cardNumber"] withImage:img atRow:indexPath.row];
     
