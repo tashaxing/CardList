@@ -10,8 +10,8 @@
 		E44901A51CEAB4A2008130C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901A41CEAB4A2008130C8 /* main.m */; };
 		E44901A81CEAB4A2008130C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901A71CEAB4A2008130C8 /* AppDelegate.m */; };
 		E44901AA1CEAB4A2008130C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E44901A91CEAB4A2008130C8 /* Assets.xcassets */; };
-		E44901B91CEAB7B1008130C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901B81CEAB7B1008130C8 /* ViewController.m */; };
-		E44901BC1CEAC51E008130C8 /* CustomCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901BB1CEAC51E008130C8 /* CustomCellView.m */; };
+		E44901B91CEAB7B1008130C8 /* UPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901B81CEAB7B1008130C8 /* UPViewController.m */; };
+		E44901BC1CEAC51E008130C8 /* UPCustomCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = E44901BB1CEAC51E008130C8 /* UPCustomCellView.m */; };
 		E44901BE1CEAF634008130C8 /* quickpass.png in Resources */ = {isa = PBXBuildFile; fileRef = E44901BD1CEAF634008130C8 /* quickpass.png */; };
 		E44901C01CEAFF0A008130C8 /* CardProperty.json in Resources */ = {isa = PBXBuildFile; fileRef = E44901BF1CEAFF0A008130C8 /* CardProperty.json */; };
 /* End PBXBuildFile section */
@@ -23,10 +23,10 @@
 		E44901A71CEAB4A2008130C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E44901A91CEAB4A2008130C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E44901AE1CEAB4A2008130C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E44901B71CEAB7B1008130C8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E44901B81CEAB7B1008130C8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E44901BA1CEAC51E008130C8 /* CustomCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCellView.h; sourceTree = "<group>"; };
-		E44901BB1CEAC51E008130C8 /* CustomCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCellView.m; sourceTree = "<group>"; };
+		E44901B71CEAB7B1008130C8 /* UPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPViewController.h; sourceTree = "<group>"; };
+		E44901B81CEAB7B1008130C8 /* UPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPViewController.m; sourceTree = "<group>"; };
+		E44901BA1CEAC51E008130C8 /* UPCustomCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPCustomCellView.h; sourceTree = "<group>"; };
+		E44901BB1CEAC51E008130C8 /* UPCustomCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCustomCellView.m; sourceTree = "<group>"; };
 		E44901BD1CEAF634008130C8 /* quickpass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quickpass.png; sourceTree = "<group>"; };
 		E44901BF1CEAFF0A008130C8 /* CardProperty.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CardProperty.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,13 +63,13 @@
 			children = (
 				E44901A61CEAB4A2008130C8 /* AppDelegate.h */,
 				E44901A71CEAB4A2008130C8 /* AppDelegate.m */,
-				E44901B71CEAB7B1008130C8 /* ViewController.h */,
-				E44901B81CEAB7B1008130C8 /* ViewController.m */,
+				E44901B71CEAB7B1008130C8 /* UPViewController.h */,
+				E44901B81CEAB7B1008130C8 /* UPViewController.m */,
 				E44901A91CEAB4A2008130C8 /* Assets.xcassets */,
 				E44901AE1CEAB4A2008130C8 /* Info.plist */,
 				E44901A31CEAB4A2008130C8 /* Supporting Files */,
-				E44901BA1CEAC51E008130C8 /* CustomCellView.h */,
-				E44901BB1CEAC51E008130C8 /* CustomCellView.m */,
+				E44901BA1CEAC51E008130C8 /* UPCustomCellView.h */,
+				E44901BB1CEAC51E008130C8 /* UPCustomCellView.m */,
 			);
 			path = CardList;
 			sourceTree = "<group>";
@@ -154,8 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E44901B91CEAB7B1008130C8 /* ViewController.m in Sources */,
-				E44901BC1CEAC51E008130C8 /* CustomCellView.m in Sources */,
+				E44901B91CEAB7B1008130C8 /* UPViewController.m in Sources */,
+				E44901BC1CEAC51E008130C8 /* UPCustomCellView.m in Sources */,
 				E44901A81CEAB4A2008130C8 /* AppDelegate.m in Sources */,
 				E44901A51CEAB4A2008130C8 /* main.m in Sources */,
 			);
@@ -251,6 +251,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CardList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tashaxing.CardList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -262,6 +263,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CardList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tashaxing.CardList;
 				PRODUCT_NAME = "$(TARGET_NAME)";

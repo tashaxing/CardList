@@ -6,17 +6,19 @@
 //  Copyright © 2016年 yxhe. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "CustomCellView.h"
+#import "UPViewController.h"
+#import "UPCustomCellView.h"
 
-@interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
+const static float kCustomCellHeight = 100.0;
+
+@interface UPViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *listData; //bankcard number and imglogo
 
 @end
 
 
-@implementation ViewController
+@implementation UPViewController
 
 #pragma mark - view delegate
 - (void)viewDidLoad
@@ -26,7 +28,6 @@
     
     //init the tableview
     UITableView *cardTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 30, self.view.bounds.size.width, self.view.bounds.size.height)];
-//    cardTableView.backgroundColor = [UIColor greenColor];
     cardTableView.dataSource = self;
     cardTableView.delegate = self;
     [self.view addSubview:cardTableView];
@@ -46,10 +47,8 @@
     
     self.listData = [jsonObj objectForKey:@"Record"];
     
-    
     //tableview must reload data
     [cardTableView reloadData];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -68,22 +67,22 @@
 {
     //reuse the customized cell
     static NSString *CellIdentifier = @"UITableViewCell";
-    CustomCellView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UPCustomCellView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
-        cell = [[CustomCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UPCustomCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
 
     //set image and text after the cell init
-    UIImage *img = [UIImage imageNamed:[self.listData[indexPath.row] objectForKey:@"imgLogo"]]; //fetch the dictionary
+    //fetch the dictionary
+    UIImage *img = [UIImage imageNamed:[self.listData[indexPath.row] objectForKey:@"imgLogo"]];
     [cell setTextLabel:[self.listData[indexPath.row] objectForKey:@"cardNumber"] withImage:img atRow:indexPath.row];
     
     return cell;
-    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //set the tableview cell height
-    return 100;
+    return kCustomCellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -95,10 +94,7 @@
                                              cancelButtonTitle:@"ok"
                                              otherButtonTitles:nil];
     [alerView show];
-
-
 }
-
 
 @end
 

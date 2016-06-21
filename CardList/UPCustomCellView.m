@@ -6,19 +6,16 @@
 //  Copyright © 2016年 yxhe. All rights reserved.
 //
 
-#import "CustomCellView.h"
+#import "UPCustomCellView.h"
 
 #define LOGO_WIDTH 152
 #define LOGO_HEIGHT 58
 
-@interface CustomCellView ()
+@interface UPCustomCellView ()
 
 @end
 
-@implementation CustomCellView
-
-
-
+@implementation UPCustomCellView
 #pragma mark - cellview delegate
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -38,9 +35,6 @@
         
     }
     
-//    [self setNeedsDisplay]; //refresh the cell?
-    
-//    NSLog(@"custome cell init");
     return self;
 }
 
@@ -53,9 +47,10 @@
 //custom the cell string logo and row color
 - (void)setTextLabel:(NSString *)cardNumberStr withImage:(UIImage *)img atRow:(NSInteger)row
 {
-    self.cardNumberLabel.text = cardNumberStr; //set string
-    self.quickPassLogo.image = img; //set image
-    self.contentView.backgroundColor = row%2 ? [UIColor greenColor]:[UIColor yellowColor]; //set background color for each line
+    self.cardNumberLabel.text = cardNumberStr;
+    self.quickPassLogo.image = img;
+    //set background color for each line
+    self.contentView.backgroundColor = row%2 ? [UIColor greenColor]:[UIColor yellowColor];
 }
 
 @end

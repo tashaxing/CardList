@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomCellView : UITableViewCell
+@interface UPCustomCellView : UITableViewCell
 
 @property (nonatomic, strong) UILabel *cardNumberLabel;
 @property (nonatomic,strong) UIImageView *quickPassLogo;
