@@ -43,7 +43,10 @@ const static float kCustomCellHeight = 100.0;
                                                  options:NSJSONReadingMutableContainers error:&error];
     
     if (!jsonObj || error)
+    {
         NSLog(@"JSON parse failed!");
+    }
+    
     
     self.listData = [jsonObj objectForKey:@"Record"];
     
@@ -69,7 +72,9 @@ const static float kCustomCellHeight = 100.0;
     static NSString *CellIdentifier = @"UITableViewCell";
     UPCustomCellView *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
+    {
         cell = [[UPCustomCellView alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
 
     //set image and text after the cell init
     //fetch the dictionary

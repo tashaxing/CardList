@@ -10,9 +10,10 @@
 
 @interface UPCustomCellView : UITableViewCell
 
-@property (nonatomic, strong) UILabel *cardNumberLabel;
-@property (nonatomic,strong) UIImageView *quickPassLogo;
+@property (nonatomic, strong) UILabel *cardNumberLabel;   //card number
+@property (nonatomic,strong) UIImageView *quickPassLogo;  //logo
 
+//set the label contents, called outside
 - (void)setTextLabel:(NSString *)cardNumberStr withImage:(UIImage *)img atRow:(NSInteger)row;
 
 @end
